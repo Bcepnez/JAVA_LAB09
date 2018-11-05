@@ -97,11 +97,17 @@ public class BTSTree<T extends Comparable<T>> implements Serializable {
 		else ret = searchNode(n.getRight(), v);
 		return ret;
 	}
-	public void print() {
+	public void printPre() {
+		printPreorder(this.root);
+	}
+	public void printPost() {
+		printPostorder(this.root);
+	}
+	public void printIn() {
 		printInorder(this.root);
 	}
 	private void printInorder(Node<T> node) {
-		if (node.get() == null) return; 
+		if (node == null) return; 
         printInorder(node.left); 
         System.out.print(node.get() + " "); 
         printInorder(node.right); 

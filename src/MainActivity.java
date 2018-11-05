@@ -5,7 +5,6 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 public class MainActivity {
-
 	public static void main(String[] arg0) {
 		Node<Integer> a,b;
 		BTSTree<Integer> root;
@@ -59,5 +58,14 @@ public class MainActivity {
 		System.out.println("root.search(40) : "+root.search(40));
 		System.out.println("Total Size : "+root.size());
 //		root.print();
+//		root.printIn();
+		System.out.print("Post Order : ");
+		root.printPost();
+		System.out.println();
+		System.out.print("Pre Order : ");
+		root.printPre();
+		System.out.println();
+		System.out.print("In Order : ");
+		root.printIn();
 	}
 }
